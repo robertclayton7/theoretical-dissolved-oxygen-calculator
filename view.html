@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atxwatersheds Open Utils</title>
+<link rel="stylesheet" href="/assets/ou/view.css">
+<script type="text/javascript" src="/assets/ou/jquery.min.js">
+</script>
+<script type="text/javascript" src="/assets/ou/theopostcal.js">
+</script>
+</head>
+<body class="Site">
+<div class="Site-header contain-to-grid sticky">
+<nav class="top-bar" data-topbar>
+<ul class="title-area">
+<li class="name">
+<h1>
+<a href="#">Open Utilities</a>
+</h1>
+</li>
+</ul>
+<section class="top-bar-section">
+<ul class="right">
+<li>
+</li>
+</ul>
+</section>
+</nav>
+</div>
+<div class="Site-content">
+<div class="row large-12.columns">
+<h3>Theoretical<span title="Dissolved Oxygen" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" class="has-tip">DO</span> Calculator</h3>  <div id='WebLoginLayer0' style='position:relative'>
+<!-- login form section-->
+<form ID="DO" NAME="DO" METHOD=POST>
+<div class="row collapse">
+<div id="noaastatuslabel" class="small-8 large-5 columns">
+<span title="GTG = Good To Go; ERR = Error; KATT is NOAA's Web Site. File is sever storage (disk) refreshed every hour. SESSION is server storage (memory) refreshed every time you start a new session." data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" class="has-tip prefix">Server Status</span>
+</div>
+<div class="small-4 large-7 columns">
+<input title="Pressure server connectivity (NOAA)" type="text" ID="INP_S" NAME="S">
+</div>
+</div>
+<div id="elevationrow" class="row collapse">
+<div class="small-8 large-5 columns">
+<span title="Used to apply correction factor of 0.001 x Ft MSL" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" class="has-tip prefix">Elevation Ft MSL</span>
+</div>
+<div class="small-4 large-7 columns">
+<input title="500 for Austin, TX" data-tooltip aria-haspopup="true" data=options="disable_for_touch:true" class="has-tip" type="number" step="10" ID="INP_C" NAME="c" />
+<small id="errelev" class="error">Error: Valid Range 0 - 21,000 feet MSL.</small>
+</div>
+</div>
+<div id="corrpressurerow" class="row collapse">
+<div class="small-8 large-5 columns">
+<span title="Barometric Pressure from KATT in Inches of Mercury corrected for elevation and converted to Torr" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" class="has-tip prefix">Pressure (mm HG aka Torr)</span>
+</div>
+<div class="small-4 large-7 columns">
+<input type="text" readonly placeholder="Calculated" ID="INP_P" NAME="P">
+<small id="errpress" class="error">Error: Is your javascript turned on? Refresh? Restart Browser? Send me an email.</small>
+</div>
+</div>
+<div class="row collapse">
+<div class="small-8 large-5 columns">
+<span class="prefix">Water Temp (C)</span>
+</div>
+<div class="small-4 large-7 columns">
+<input type="number" placeholder="Enter Water Temp (C)" step="0.1" ID="INP_T" NAME="T">
+<small id="errtemp" class="error">Error: Valid Range 0 - 50 degrees C.</small>
+</div>
+</div>
+<div class="row collapse">
+<div class="small-8 large-5 columns">
+<span class="prefix">Theoretical DO in Mg/L</span>
+</div>
+<div class="small-4 large-7 columns">
+<input type="text" readonly placeholder="" ID="answer">
+</div>
+</div>
+</div>
+<div class="row right">
+<div class="small-12 large-12 columns">
+<input id="cleario" type="button" value="Reset">
+<input id="submitit" type="button" value="Calculate">
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="row large-12 columns">
+<p><code>This application is provided as-is with no support. Should continue working for KATT in the near future. Consider switching your DO QC to rely upon percent saturation. 2022-10-10 rwclayton</code>
+</p>
+</div>
+<div class="hidden">
+>
+<

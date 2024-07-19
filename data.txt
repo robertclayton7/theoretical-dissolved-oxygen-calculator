@@ -1,0 +1,1 @@
+{"DATETIME":"20240719134119","RAWPRESSUREINCHESHG":"0","STATUSMSG":"ERR: https:\/\/w1.weather.gov\/data\/METAR\/KATT.1.txt","STATUS":"ERR","NOAAKATTURL":"https:\/\/w1.weather.gov\/data\/METAR\/KATT.1.txt"}

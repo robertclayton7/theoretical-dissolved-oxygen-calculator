@@ -1,0 +1,93 @@
+@import 'datatables.foundation.buttons.select.editor.css';
+
+#INP_S.gtg
+{
+background: #228B22;
+}
+#INP_S.err
+{
+background: #FF4500;
+}
+.hidden {
+display: none;
+}
+#answer
+{
+background: yellow;
+color: red;
+}
+:root
+{
+--space: 10px; --space-lg: 100px;
+}
+
+.Site
+{
+ display: flex;
+ flex-direction: column;
+ height: 100%; /* 1, 3 */
+}
+.Site-footer
+{
+flex: none;
+/* 2 */ background: #282C34;
+color: #F4F4F4;
+text-align: center;
+padding-top: 5px;
+font-size: 8px;
+}
+.Site-content
+{
+flex: 1 0 auto;
+/* 2 */ padding: var(--space) var(--space) 0;
+width: 100%;
+}
+.Site-content::after
+{
+content: '\00a0';
+/* &nbsp; */ display: block;
+margin-top: var(--space);
+height: 0px;
+visibility: hidden;
+}
+
+@media (--break-lg)
+{
+.Site-content
+    {
+    padding-top: var(--space-lg);
+    }
+.Site-content::after
+    {
+    margin-top: var(--space-lg);
+    }
+}
+.Site-content--full
+{
+padding: 0px;
+}
+.Site-content--full::after
+{
+content: none;
+}
+.top-bar
+{
+background: #282C34;
+color: #F4F4F4;
+}
+.close-button,.button
+{
+border-radius: 5px 5px 5px 5px;
+}
+.buttons-create
+{
+border-radius: 5px 0px 0px 5px;
+}
+.buttons-edit
+{
+border-radius: 0px 0px 0px 0px;
+}
+.buttons-remove
+{
+border-radius: 0px 5px 5px 0px;
+}
