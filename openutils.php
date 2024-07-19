@@ -13,21 +13,16 @@ hosted_on@:     As of February 28, 2017: https://utils.atxwatersheds.org/u/
 */
 session_start();
 date_default_timezone_set('America/Chicago');
-require_once('logger.php');
 require_once('openUtils.class.php');
 require_once('pressure.php');
 require_once('theodocal.php');
 
 class openUtil extends openUtils
 {
-
-    public $log;
     public $request;
 
     public function __construct($request) {
         parent::__construct($request);
-        $this->log = Logger::getLogger('openUtils');
-
     }
     #<!-- end function constructor -->
 
@@ -81,6 +76,7 @@ class openUtil extends openUtils
         #<!-- end switch case -->
 
         if(!isset($theopostcal)) {
+          <!-- note there was a logger -->
             $this->log->error("theopostcal hit - invalid action.");
             die();
         }
@@ -96,14 +92,15 @@ if (!array_key_exists('HTTP_ORIGIN', $_SERVER)) {
    $_SERVER['HTTP_ORIGIN'] = $_SERVER['SERVER_NAME'];
     }
 try {
-       $outerlog->info('*****************************************************');
-       $outerlog->info('Open Utils pinged from ' . $_SERVER['HTTP_ORIGIN']);
+  <!-- note there was a logger -->    
+  $outerlog->info('Open Utils pinged from ' . $_SERVER['HTTP_ORIGIN']);
        $OpenUtility = new openUtil($_REQUEST['request']);
        echo $OpenUtility->processOpenUtils();
 
     } catch (Exception $e) {
        echo json_encode(Array('error: ' => $e->getMessage()));
-       $outerlog->error($e->getMessage());
+          <!-- note there was a logger -->
+         $outerlog->error($e->getMessage());
     }
 
 ?>
